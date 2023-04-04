@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	text-align: center;
+	background-color: #333;
+	color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#drum-machine {
+  width: clamp(300px, 90vw, 1000px);
+	display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: space-around;
+	gap: 2rem;
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  padding: 2rem;
+	background-color: white;
+	color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container > button.drum-pad {
+  font-size: 3rem;
+}
+
+.grid {
+	display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 10vw));
+  grid-template-rows: repeat(3, minmax(100px, 10vw));
+  grid-gap: 0.25rem;
+  align-items: stretch;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex {
+	display: flex;
+  flex-direction: column;
+	font-size: 2rem;
+  justify-content: space-evenly;
+	gap: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#controls { 
+	background-color: #333;
+	color: white;
+	padding: 1rem;
+	border-radius: 0.5rem;
 }
