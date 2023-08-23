@@ -75,7 +75,7 @@ function App() {
 		gainNode.gain.value = gain;
 		console.log(gainNode.gain.value);
 		console.log(gain);
-	}, [gain])
+	}, [gainNode.gain, gain])
 
 	/** function that takes a keypress and creates a bufferSource, 
 	 	* plays it, and returns the ID of the drum played
